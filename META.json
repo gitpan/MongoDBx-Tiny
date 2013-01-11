@@ -32,10 +32,19 @@
       },
       "runtime" : {
          "requires" : {
-            "Test::More" : 0
+            "Carp" : 0,
+            "Class::Trigger" : 0,
+            "Data::Dumper" : 0,
+            "Digest::SHA" : 0,
+            "IO::File" : 0,
+            "MongoDB" : 0,
+            "Params::Validate" : 0,
+            "Scalar::Util" : 0,
+            "Test::More" : 0,
+            "Tie::IxHash" : 0
          }
       }
    },
-   "release_status" : "stable",
-   "version" : "0.02"
+   "release_status" : "testing",
+   "version" : "0.02_01"
 }
