@@ -10,11 +10,11 @@ MongoDBx::Tiny - Simple Mongo ORM for Perl
 
 =head1 VERSION
 
-Version 0.02_01
+Version 0.02_02
 
 =cut
 
-our $VERSION = '0.02_01';
+our $VERSION = '0.02_02';
 
 =head1 SYNOPSIS
 
@@ -134,7 +134,13 @@ sub new {
 	$class->install_database_name($opt->{database_name});
     }
     my $self = bless{},$class;
-    $self->connect;
+    eval { $self->connect; };
+
+    if ($@) {
+	Carp::carp $@;
+	return;
+    }
+
     return $self;
 }
 

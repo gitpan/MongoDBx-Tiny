@@ -28,4 +28,4 @@ requires:
   Scalar::Util: 0
   Test::More: 0
   Tie::IxHash: 0
-version: 0.02_01
+version: 0.02_02
